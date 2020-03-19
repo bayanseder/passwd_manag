@@ -1,0 +1,33 @@
+{
+  "name": "passwd_manag",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bcrypt": "^4.0.1",
+    "body-parser": "^1.19.0",
+    "env2": "^2.2.2",
+    "eslint": "^6.8.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2",
+    "pg": "^7.18.2",
+    "supertest": "^4.0.2",
+    "tape": "^4.13.2",
+    "tap-spec": "^5.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bayanseder/passwd_manag.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bayanseder/passwd_manag/issues"
+  },
+  "homepage": "https://github.com/bayanseder/passwd_manag#readme"
+}
