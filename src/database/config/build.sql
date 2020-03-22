@@ -7,9 +7,9 @@ CREATE TABLE userstable (
     password VARCHAR(300) NOT NULL   
 );
 
-INSERT INTO theusers (user_name ,email ,password)
-    values (jahesh ,jahesh4@home.com , 22334455q),
-           (cow ,cow2020@cow.com ,zxczxc123);
+INSERT INTO userstable (user_name ,email ,password)
+    values ('jahesh' ,'jahesh4@home.com' , '22334455q'),
+           ('cow' ,'cow2020@cow.com' ,'zxczxc123');
 
 COMMIT;
 END;

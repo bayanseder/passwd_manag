@@ -5,6 +5,6 @@ const connection = process.env.db_url;
 
 
 module.exports= new Pool({
-    connictionString : connection ,
-    sll : true
+    connectionString : connection ,
+    ssl :!connection.includes('localhost')
 });
