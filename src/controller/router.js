@@ -8,7 +8,7 @@ const getdata = require('../database/queries/getdata');
 const validation = require('../controller/validation');
 const hashing = require('../controller/hashing')
 
-
+router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({extended: false}))
 router.use(express.static(path.join(__dirname,'..','..','public')))
 router.post('/signin',(req,res)=>{
