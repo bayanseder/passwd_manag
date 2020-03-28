@@ -1,0 +1,77 @@
+body{
+    margin: 0;
+    padding: 0;
+    /* text-align: center; */
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: xx-large;
+    background-color: rgba(245, 228, 207, 0.678) ;
+    height: 15vh;
+    box-shadow: 40px 0 4px gray;
+}
+.signup_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    background-color: rgb(245, 228, 207);
+    border: double black;
+    margin: 10% 20% 10% 20%;
+    padding: 5% 5% 5% 5%;
+    height: 65vh;
+    font-size: large;
+    box-shadow: 4px 4px 4px gray;
+}
+.signup_form input{
+    height: 25px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.signup_form button{
+    margin-bottom: 20px;
+    background-color: rgb(250, 176, 198);
+    height: 35px;
+}
+.back{
+    margin :0 0 40px 20%;
+    text-decoration: none;
+    font-size: xx-large;
+    color: black;
+}
+.footer{
+    background-color: rgb(250, 176, 198);
+    margin-top: 20px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.parag{
+    font-size: x-large;
+    margin: 5% 0 5% 10%;
+}
+.signin_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    background-color: rgb(245, 228, 207);
+    border: double black;
+    margin: 0 20% 10% 20%;
+    padding: 5% 5% 5% 5%;
+    font-size: large;
+    box-shadow: 4px 4px 4px gray;
+}
+.signin_form input{
+    height: 25px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.signin_form button{
+    margin-bottom: 10px;
+    background-color: rgb(250, 176, 198);
+    height: 35px;
+}
+
