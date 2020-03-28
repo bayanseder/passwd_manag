@@ -17,9 +17,10 @@ const hashPassword =(reqbody)=>{
         .catch(err=>console.log(err))
 } 
 
-const comparepass =(reqbody)=>{
-    return bcrypt.compare()
+const comparepass =(reqbody,response)=>{
+    return bcrypt.compare(reqbody.password ,response[0].password)
 }
 
 
-module.exports = hashPassword
+
+module.exports = {hashPassword ,comparepass}

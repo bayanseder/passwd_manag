@@ -3,7 +3,7 @@ const connection = require('../config/connection');
 const getuser = (reqbody,callback)=>{
     const sql ={
         text : 'select * from userstable where email=$1',
-        values :[req.body.email]
+        values :[reqbody.email]
     }
   return connection.query(sql,(err,res)=>{
       if(err){

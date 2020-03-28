@@ -19,12 +19,14 @@ router.post('/signin',(req,res)=>{
             return res.status(400).json({message : error.toString()})
         }
         else{
-            getdata.getuser(reqbody,(err,res)=>{
+            getdata(reqbody,(err,response)=>{
             if(err){
-                return res.status(400).join({message : 'some error in post'})
+                return res.status(400).json({message : 'data not found'})
             }    
             else{
-                return res.status(200).join({message : 'sucsses... yeah!'})
+                if(hashing.comparepass(reqbody,response)){
+                return res.status(200).json({message : 'sucsses... yeah!'})}
+                else { res.send('wrong password')}
             }
             })
         }
@@ -32,12 +34,12 @@ router.post('/signin',(req,res)=>{
 
 router.post('/signup',(req,res)=>{
     const reqbody=req.body;
-    validation(reqbody);
+    validation.inputvalid(reqbody);
     if(validation.inputvalid(reqbody)===false){
         res.status(500).send('error in validation')
     }
     else{
-        hashing(reqbody)
+        hashing.hashPassword(reqbody)
         res.redirect('/')
     }
 })

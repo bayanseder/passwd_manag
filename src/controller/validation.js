@@ -37,13 +37,12 @@ const signinvalid=(reqbody)=>{
             .email({
                 minDomainSegments: 2, 
                 tlds: { allow: ['com', 'net'] }
-            })
-            .min(10),
+            }),
         password: joi
             .string()
             .alphanum()
             .min(6)
-            .pattern(new RegExp('^(?=.[a-z])(?=.[A-Z])(?=.*[0-9])')),
+            .pattern(new RegExp('^[a-zA-Z0-9]')),
     }
 
     const schema = joi.object(validationObject);
