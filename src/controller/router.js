@@ -20,14 +20,17 @@ router.post('/signin',(req,res)=>{
         }
         else{
             getdata(reqbody,(err,response)=>{
-            if(err){
+                if(err){
+                    return res.status(500).send('server error')
+                }
+                else if(response[0]==undefined){
                 return res.status(400).json({message : 'data not found'})
-            }    
-            else{
-                if(hashing.comparepass(reqbody,response)){
+                }    
+                else{
+                if(hashing.comparepass(reqbody,response)===true){
                 return res.status(200).json({message : 'sucsses... yeah!'})}
                 else { res.send('wrong password')}
-            }
+                }
             })
         }
     })

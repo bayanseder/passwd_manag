@@ -19,7 +19,7 @@ const inputvalid=(reqbody)=>{
             .string()
             .alphanum()
             .min(8)
-            .pattern(new RegExp('^[a-zA-Z0-9]')),
+            .pattern(new RegExp('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])')),
         verify_password: joi.ref('password'),
         
     };
@@ -42,7 +42,7 @@ const signinvalid=(reqbody)=>{
             .string()
             .alphanum()
             .min(6)
-            .pattern(new RegExp('^[a-zA-Z0-9]')),
+            .pattern(new RegExp('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])')),
     }
 
     const schema = joi.object(validationObject);
